@@ -13,6 +13,8 @@
 		DAB0575728A6EDAD00EF7A3A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB0575628A6EDAD00EF7A3A /* Preview Assets.xcassets */; };
 		DAB0576128A6EDAD00EF7A3A /* JuiceMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0576028A6EDAD00EF7A3A /* JuiceMakerTests.swift */; };
 		DAB0577B28A6F26500EF7A3A /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0577A28A6F26500EF7A3A /* Fruit.swift */; };
+		DAB0577D28A6F39A00EF7A3A /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0577C28A6F39A00EF7A3A /* Juice.swift */; };
+		DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0577E28A6F5EF00EF7A3A /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		DAB0576028A6EDAD00EF7A3A /* JuiceMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerTests.swift; sourceTree = "<group>"; };
 		DAB0576628A6EDAD00EF7A3A /* JuiceMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuiceMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB0577A28A6F26500EF7A3A /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		DAB0577C28A6F39A00EF7A3A /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
+		DAB0577E28A6F5EF00EF7A3A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				DAB0577A28A6F26500EF7A3A /* Fruit.swift */,
+				DAB0577C28A6F39A00EF7A3A /* Juice.swift */,
+				DAB0577E28A6F5EF00EF7A3A /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			files = (
 				DAB0577B28A6F26500EF7A3A /* Fruit.swift in Sources */,
 				DAB0575228A6EDAA00EF7A3A /* ContentView.swift in Sources */,
+				DAB0577D28A6F39A00EF7A3A /* Juice.swift in Sources */,
 				DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */,
+				DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
