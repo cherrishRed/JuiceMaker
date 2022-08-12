@@ -9,8 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+      VStack(spacing: 30) {
+        Button {
+        } label: {
+          Text("주스 주문 하기")
+        }
+        .buttonStyle(MyButtonStyle())
+        
+        Button {
+        } label: {
+          Text("메뉴 보기")
+        }
+        .buttonStyle(MyButtonStyle())
+        
+        Button {
+        } label: {
+          Text("재료 창고")
+        }
+        .buttonStyle(MyButtonStyle())
+      }
     }
 }
 

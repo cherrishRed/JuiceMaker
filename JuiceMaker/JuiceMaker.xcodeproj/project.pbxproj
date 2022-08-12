@@ -16,6 +16,7 @@
 		DAB0577D28A6F39A00EF7A3A /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0577C28A6F39A00EF7A3A /* Juice.swift */; };
 		DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0577E28A6F5EF00EF7A3A /* Recipe.swift */; };
 		DAB0578128A6F76900EF7A3A /* JuiceMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0578028A6F76900EF7A3A /* JuiceMaker.swift */; };
+		DAB0578328A705CB00EF7A3A /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0578228A705CA00EF7A3A /* CustomButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		DAB0577C28A6F39A00EF7A3A /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
 		DAB0577E28A6F5EF00EF7A3A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DAB0578028A6F76900EF7A3A /* JuiceMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMaker.swift; sourceTree = "<group>"; };
+		DAB0578228A705CA00EF7A3A /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				DAB0574F28A6EDAA00EF7A3A /* JuiceMakerApp.swift */,
 				DAB0575128A6EDAA00EF7A3A /* ContentView.swift */,
+				DAB0578228A705CA00EF7A3A /* CustomButtonStyle.swift */,
 				DAB0577928A6F14100EF7A3A /* Model */,
 				DAB0575328A6EDAD00EF7A3A /* Assets.xcassets */,
 				DAB0575528A6EDAD00EF7A3A /* Preview Content */,
@@ -268,6 +271,7 @@
 				DAB0577D28A6F39A00EF7A3A /* Juice.swift in Sources */,
 				DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */,
 				DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */,
+				DAB0578328A705CB00EF7A3A /* CustomButtonStyle.swift in Sources */,
 				DAB0578128A6F76900EF7A3A /* JuiceMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
