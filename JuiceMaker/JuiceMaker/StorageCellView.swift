@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StorageCellView: View {
-  var viewModel: StorageCellViewModel
+  @ObservedObject var viewModel: StorageCellViewModel
   
   init(viewModel: StorageCellViewModel) {
     self.viewModel = viewModel
@@ -16,7 +16,7 @@ struct StorageCellView: View {
   
     var body: some View {
       VStack(spacing: 0) {
-        Text("🍓")
+        Text(viewModel.fruit.icon)
           .font(Font.custom("TossFaceFontMac", size: 48))
         
         HStack {

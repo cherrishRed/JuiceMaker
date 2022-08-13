@@ -13,12 +13,11 @@ struct StorageView: View {
     var body: some View {
       VStack {
         Text("재료 창고")
+          
         List {
           ForEach(viewModel.fruits.sorted(by: >), id: \.key) { key, value in
-            HStack {
-              Text("\(key.name)")
-              Text("\(value) 개")
-            }
+            
+            StorageCellView(viewModel: StorageCellViewModel(fruit: key, count: value))
             
           }
         }
