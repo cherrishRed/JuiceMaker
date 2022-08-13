@@ -19,3 +19,13 @@ struct MyButtonStyle: ButtonStyle {
       .offset(x: 0, y: configuration.isPressed ? 10 : 0)
   }
 }
+
+struct StepperButtonStyle: ButtonStyle {
+  func makeBody(configuration: Configuration) -> some View {
+    configuration.label
+      .padding()
+      .foregroundColor(.black)
+      .background(configuration.isPressed ? .gray : .white)
+      .cornerRadius(5)
+  }
+}
