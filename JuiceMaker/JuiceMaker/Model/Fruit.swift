@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct Fruit: Hashable {
+struct Fruit: Hashable, Comparable {
+  static func < (lhs: Fruit, rhs: Fruit) -> Bool {
+    lhs.name < rhs.name
+  }
+  
   var name: String
 }

@@ -17,6 +17,10 @@
 		DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0577E28A6F5EF00EF7A3A /* Recipe.swift */; };
 		DAB0578128A6F76900EF7A3A /* JuiceMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0578028A6F76900EF7A3A /* JuiceMaker.swift */; };
 		DAB0578328A705CB00EF7A3A /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0578228A705CA00EF7A3A /* CustomButtonStyle.swift */; };
+		DAB0578528A7066A00EF7A3A /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0578428A7066A00EF7A3A /* StorageView.swift */; };
+		DAB0578728A7071A00EF7A3A /* StorageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0578628A7071A00EF7A3A /* StorageViewModel.swift */; };
+		DAB0578B28A82DB100EF7A3A /* BMJUA_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAB0578A28A82DA100EF7A3A /* BMJUA_otf.otf */; };
+		DAB0578C28A82DB300EF7A3A /* TossFaceFontMac.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAB0578828A82CAB00EF7A3A /* TossFaceFontMac.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		DAB0577E28A6F5EF00EF7A3A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DAB0578028A6F76900EF7A3A /* JuiceMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMaker.swift; sourceTree = "<group>"; };
 		DAB0578228A705CA00EF7A3A /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		DAB0578428A7066A00EF7A3A /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
+		DAB0578628A7071A00EF7A3A /* StorageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewModel.swift; sourceTree = "<group>"; };
+		DAB0578828A82CAB00EF7A3A /* TossFaceFontMac.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TossFaceFontMac.ttf; sourceTree = "<group>"; };
+		DAB0578A28A82DA100EF7A3A /* BMJUA_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMJUA_otf.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +109,12 @@
 			children = (
 				DAB0574F28A6EDAA00EF7A3A /* JuiceMakerApp.swift */,
 				DAB0575128A6EDAA00EF7A3A /* ContentView.swift */,
+				DAB0578428A7066A00EF7A3A /* StorageView.swift */,
+				DAB0578628A7071A00EF7A3A /* StorageViewModel.swift */,
 				DAB0578228A705CA00EF7A3A /* CustomButtonStyle.swift */,
 				DAB0577928A6F14100EF7A3A /* Model */,
 				DAB0575328A6EDAD00EF7A3A /* Assets.xcassets */,
+				DAB0578928A82CE100EF7A3A /* Font */,
 				DAB0575528A6EDAD00EF7A3A /* Preview Content */,
 			);
 			path = JuiceMaker;
@@ -134,6 +145,15 @@
 				DAB0577E28A6F5EF00EF7A3A /* Recipe.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DAB0578928A82CE100EF7A3A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DAB0578A28A82DA100EF7A3A /* BMJUA_otf.otf */,
+				DAB0578828A82CAB00EF7A3A /* TossFaceFontMac.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB0575728A6EDAD00EF7A3A /* Preview Assets.xcassets in Resources */,
+				DAB0578B28A82DB100EF7A3A /* BMJUA_otf.otf in Resources */,
 				DAB0575428A6EDAD00EF7A3A /* Assets.xcassets in Resources */,
+				DAB0578C28A82DB300EF7A3A /* TossFaceFontMac.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +291,9 @@
 				DAB0577B28A6F26500EF7A3A /* Fruit.swift in Sources */,
 				DAB0575228A6EDAA00EF7A3A /* ContentView.swift in Sources */,
 				DAB0577D28A6F39A00EF7A3A /* Juice.swift in Sources */,
+				DAB0578728A7071A00EF7A3A /* StorageViewModel.swift in Sources */,
 				DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */,
+				DAB0578528A7066A00EF7A3A /* StorageView.swift in Sources */,
 				DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */,
 				DAB0578328A705CB00EF7A3A /* CustomButtonStyle.swift in Sources */,
 				DAB0578128A6F76900EF7A3A /* JuiceMaker.swift in Sources */,
