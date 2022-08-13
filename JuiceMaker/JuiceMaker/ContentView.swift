@@ -14,19 +14,19 @@ struct ContentView: View {
         } label: {
           Text("주스 주문 하기")
         }
-        .buttonStyle(MyButtonStyle())
+        .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: .red))
         
         Button {
         } label: {
           Text("메뉴 보기")
         }
-        .buttonStyle(MyButtonStyle())
+        .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: Color.init("storageBrown")))
         
         Button {
         } label: {
           Text("재료 창고")
         }
-        .buttonStyle(MyButtonStyle())
+        .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: Color.init("storageBrown")))
       }
     }
 }

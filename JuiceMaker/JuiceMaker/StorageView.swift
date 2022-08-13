@@ -12,8 +12,29 @@ struct StorageView: View {
   
     var body: some View {
       VStack {
-        Text("재료 창고")
+        HStack {
+          Button {
+          } label: {
+            Text("❌")
+          }
+          .buttonStyle(NavButtonStyle(backgroundColor: .white, shadowColor: .red))
           
+          Spacer()
+          
+          Text("재료 창고")
+            .font(Font.custom("BMJUAOTF", size: 36))
+            .padding()
+          
+          Spacer()
+          
+          Button {
+          } label: {
+            Text("💾")
+          }
+          .buttonStyle(NavButtonStyle(backgroundColor: .white, shadowColor: .green))
+        }
+        .padding()
+
         List {
           ForEach(viewModel.fruits.sorted(by: >), id: \.key) { key, value in
             
