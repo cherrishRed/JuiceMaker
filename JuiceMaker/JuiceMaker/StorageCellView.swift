@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct StorageCellView: View {
+  var viewModel: StorageCellViewModel
+  
+  init(viewModel: StorageCellViewModel) {
+    self.viewModel = viewModel
+  }
+  
     var body: some View {
       VStack(spacing: 0) {
         Text("🍓")
@@ -15,7 +21,7 @@ struct StorageCellView: View {
         
         HStack {
           Button {
-            
+            viewModel.minusFruit()
           } label: {
             Text("<")
           }
@@ -23,12 +29,12 @@ struct StorageCellView: View {
           
           Spacer()
           
-          Text("12")
+          Text("\(viewModel.count)")
           
           Spacer()
           
           Button {
-            
+            viewModel.plusFruit()
           } label: {
             Text(">")
           }
@@ -39,12 +45,4 @@ struct StorageCellView: View {
         .padding()
       }
     }
-}
-
-struct StorageCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        StorageCellView()
-        .previewLayout(.sizeThatFits)
-    }
-  
 }
