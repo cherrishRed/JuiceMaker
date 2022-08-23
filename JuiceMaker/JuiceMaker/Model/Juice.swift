@@ -7,7 +7,9 @@
 
 import Foundation
 
+
 struct Juice {
-  var name: String
-  var recipe: Recipe
+  let name: String
+  let recipe: Recipe
+  let color: String
 }

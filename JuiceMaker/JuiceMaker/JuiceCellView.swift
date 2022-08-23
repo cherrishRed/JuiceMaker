@@ -49,15 +49,15 @@ extension JuiceCellView {
   var juiceImageView: some View {
     ZStack {
       CupShape()
-        .stroke(.gray, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+        .stroke(Color("glassBlue"), style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
           .frame(width: 120, height: 120)
       
       CupShape()
-        .fill(.gray)
+        .fill(Color("glassBlue"))
           .frame(width: 120, height: 120)
       
       WaterWave(progress: 0.8, waveHeight: 0.3, offset: startAnimation)
-        .fill(.pink)
+        .fill(Color(juice.color))
         .frame(width: 110, height: 110)
         .mask {
           CupShape()
@@ -118,7 +118,7 @@ struct WaterWave: Shape {
 
 struct JuiceCellView_Previews: PreviewProvider {
     static var previews: some View {
-      JuiceCellView(juice: Juice(name: "수박주스", recipe: Recipe(ingredient: [Fruit(name: "수박", icon: "🍉") : 1])))
+      JuiceCellView(juice: Juice(name: "수박주스", recipe: Recipe(ingredient: [Fruit(name: "수박", icon: "🍉") : 1]), color: "watermelonRed"))
     }
 }
 
