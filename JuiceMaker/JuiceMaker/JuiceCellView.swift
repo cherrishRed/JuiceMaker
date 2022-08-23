@@ -9,15 +9,24 @@ import SwiftUI
 
 struct JuiceCellView: View {
   @State var startAnimation: CGFloat = 0
+  var juice: Juice
+  
+  init(juice: Juice) {
+    self.juice = juice
+  }
   
     var body: some View {
-      VStack(spacing: 20) {
-        juiceImageView
-          .padding()
-        Text("딸기 주스")
-          .font(Font.custom("BMJUAOTF", size: 40))
-        ingrdientView
-        
+      ZStack {
+        RoundedRectangle(cornerRadius: 20)
+          .fill(.white)
+        VStack(spacing: 20) {
+          juiceImageView
+            .padding()
+          Text("\(juice.name)")
+            .font(Font.custom("BMJUAOTF", size: 40))
+          ingrdientView
+          
+        }
       }
     }
 }
@@ -109,7 +118,7 @@ struct WaterWave: Shape {
 
 struct JuiceCellView_Previews: PreviewProvider {
     static var previews: some View {
-        JuiceCellView()
+      JuiceCellView(juice: Juice(name: "수박주스", recipe: Recipe(ingredient: [Fruit(name: "수박", icon: "🍉") : 1])))
     }
 }
 

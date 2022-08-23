@@ -45,6 +45,7 @@ struct StorageView: View {
       }
     }
 }
+// 동기화를 해두고 x 상태를 누르면 처음 snapshot 으로 돌아가는 방향으로... 
 
 struct StorageView_Previews: PreviewProvider {
     static var previews: some View {
