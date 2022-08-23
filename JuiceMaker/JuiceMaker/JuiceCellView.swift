@@ -33,14 +33,18 @@ struct JuiceCellView: View {
 
 extension JuiceCellView {
   var ingrdientView: some View {
-    HStack {
-      Text("🍓")
-        .font(Font.custom("TossFaceFontMac", size: 30))
-      Group {
-        Text("x")
-        Text("12")
+    VStack {
+      ForEach(juice.recipe.ingredient.sorted(by: >), id: \.key) { fruit, amount in
+        HStack {
+          Text(fruit.icon)
+            .font(Font.custom("TossFaceFontMac", size: 30))
+          Group {
+            Text("x")
+            Text("\(amount)")
+          }
+          .font(Font.custom("BMJUAOTF", size: 30))
+        }
       }
-      .font(Font.custom("BMJUAOTF", size: 30))
     }
   }
 }
@@ -117,8 +121,11 @@ struct WaterWave: Shape {
 }
 
 struct JuiceCellView_Previews: PreviewProvider {
-    static var previews: some View {
-      JuiceCellView(juice: Juice(name: "수박주스", recipe: Recipe(ingredient: [Fruit(name: "수박", icon: "🍉") : 1]), color: "watermelonRed"))
-    }
+  static var previews: some View {
+    JuiceCellView(juice: Juice(name: "딸바주스",
+                               recipe: Recipe(ingredient: [Fruit(name: "딸기", icon: "🍓") : 1,
+                                                           Fruit(name: "바나나", icon: "🍌") : 1]),
+                               color: "strawberryPink"))
+  }
 }
 
