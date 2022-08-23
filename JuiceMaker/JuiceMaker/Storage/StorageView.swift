@@ -9,11 +9,18 @@ import SwiftUI
 
 struct StorageView: View {
   var viewModel: StorageViewModel
+  @ObservedObject var viewRouter: ViewRouter
+  
+  init(viewModel: StorageViewModel, viewRouter: ViewRouter) {
+    self.viewModel = viewModel
+    self.viewRouter = viewRouter
+  }
   
     var body: some View {
       VStack {
         HStack {
           Button {
+            viewRouter.currentPage = "JuiceMenuView"
           } label: {
             Text("❌")
           }
@@ -28,6 +35,7 @@ struct StorageView: View {
           Spacer()
           
           Button {
+            viewRouter.currentPage = "JuiceMenuView"
           } label: {
             Text("💾")
           }
@@ -49,6 +57,6 @@ struct StorageView: View {
 
 struct StorageView_Previews: PreviewProvider {
     static var previews: some View {
-        StorageView(viewModel: StorageViewModel())
+        StorageView(viewModel: StorageViewModel(), viewRouter: ViewRouter())
     }
 }

@@ -25,8 +25,8 @@ struct JuiceCellView: View {
           Text("\(juice.name)")
             .font(Font.custom("BMJUAOTF", size: 40))
           ingrdientView
-          
         }
+        .frame(height: .infinity)
       }
     }
 }
