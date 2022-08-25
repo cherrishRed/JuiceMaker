@@ -11,6 +11,7 @@ struct JuiceMenuView: View {
   @State var tag:Int? = nil
   let mockData = JuiceMaker()
   @ObservedObject var viewRouter: ViewRouter
+  @ObservedObject var service: JuiceService
   
   var body: some View {
     ZStack {
@@ -55,6 +56,6 @@ struct JuiceMenuView: View {
 
 struct JuiceMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        JuiceMenuView(viewRouter: ViewRouter())
+        JuiceMenuView(viewRouter: ViewRouter(), service: JuiceService())
     }
 }

@@ -57,6 +57,6 @@ struct StorageView: View {
 
 struct StorageView_Previews: PreviewProvider {
     static var previews: some View {
-        StorageView(viewModel: StorageViewModel(), viewRouter: ViewRouter())
+      StorageView(viewModel: StorageViewModel(service: JuiceService()), viewRouter: ViewRouter())
     }
 }

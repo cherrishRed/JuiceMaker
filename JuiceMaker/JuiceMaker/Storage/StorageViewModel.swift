@@ -8,11 +8,14 @@
 import Foundation
 
 class StorageViewModel {
-  var fruits: [Fruit: Int] = [.strawberry: 12,
-                              .apple: 3,
-                              .peach: 4,
-                              .watermelcon: 5,
-                              .banana: 6,
-                              .mango: 7,
-                              .kiwi: 8]
+  private let service: JuiceService
+  var fruits: [Fruit: Int]
+  
+  init(service: JuiceService) {
+    self.service = service
+    self.fruits = service.stock
+  }
+  
+  
+  
 }

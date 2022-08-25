@@ -11,15 +11,17 @@ import Combine
 struct ContentView: View {
   @State var page = "JuiceMenuView"
   @ObservedObject var viewRouter: ViewRouter
+  @ObservedObject var service: JuiceService
   
   var body: some View {
        VStack {
           if viewRouter.currentPage == "JuiceMenuView" {
-            JuiceMenuView(viewRouter: viewRouter)
-            
+            JuiceMenuView(viewRouter: viewRouter, service: service)
+
           } else if viewRouter.currentPage == "StorageView" {
             
-              StorageView(viewModel: StorageViewModel(), viewRouter: viewRouter)
+            StorageView(viewModel: StorageViewModel(service: service), viewRouter: viewRouter)
+            
           } else if viewRouter.currentPage == "CustomJuiceView" {
             
             CustomJuiceView(viewRouter: viewRouter, juiceName: "")
@@ -30,7 +32,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-      ContentView(viewRouter: ViewRouter())
+      ContentView(viewRouter: ViewRouter(), service: JuiceService())
     }
 }
 
