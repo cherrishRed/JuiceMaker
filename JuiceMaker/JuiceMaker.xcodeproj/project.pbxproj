@@ -26,6 +26,7 @@
 		DAB0579428A83CFD00EF7A3A /* StorageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0579328A83CFD00EF7A3A /* StorageCellView.swift */; };
 		DAB0579628A844BC00EF7A3A /* StorageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0579528A844BC00EF7A3A /* StorageCellViewModel.swift */; };
 		DAB0579928A93E8600EF7A3A /* JuiceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0579828A93E8600EF7A3A /* JuiceCellView.swift */; };
+		DADECF3728B7E94E00603498 /* CustomJuiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF3628B7E94E00603498 /* CustomJuiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DAB0579328A83CFD00EF7A3A /* StorageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCellView.swift; sourceTree = "<group>"; };
 		DAB0579528A844BC00EF7A3A /* StorageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCellViewModel.swift; sourceTree = "<group>"; };
 		DAB0579828A93E8600EF7A3A /* JuiceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceCellView.swift; sourceTree = "<group>"; };
+		DADECF3628B7E94E00603498 /* CustomJuiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJuiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		DA2C72FD28B6AE2A006AAB8B /* CustomJuice */ = {
 			isa = PBXGroup;
 			children = (
+				DADECF3628B7E94E00603498 /* CustomJuiceView.swift */,
 			);
 			path = CustomJuice;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */,
 				DAB0578528A7066A00EF7A3A /* StorageView.swift in Sources */,
 				DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */,
+				DADECF3728B7E94E00603498 /* CustomJuiceView.swift in Sources */,
 				DAB0578328A705CB00EF7A3A /* CustomButtonStyle.swift in Sources */,
 				DAB0578128A6F76900EF7A3A /* JuiceMaker.swift in Sources */,
 			);

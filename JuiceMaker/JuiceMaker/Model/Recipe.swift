@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct Recipe {
+class Recipe {
+  init(ingredient: [Fruit : Int]) {
+    self.ingredient = ingredient
+  }
+  
   var ingredient: [Fruit: Int]
 }

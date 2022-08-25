@@ -19,7 +19,9 @@ struct ContentView: View {
             
           } else if viewRouter.currentPage == "StorageView" {
               StorageView(viewModel: StorageViewModel(), viewRouter: viewRouter)
-          }
+          } else if viewRouter.currentPage == "CustomJuiceView" {
+            CustomJuiceView(viewRouter: viewRouter, juiceName: "")
+        }
       }
   }
 }

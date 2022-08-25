@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Fruit: String, Comparable {
+enum Fruit: String, CaseIterable, Comparable {
   static func < (lhs: Fruit, rhs: Fruit) -> Bool {
     lhs.rawValue < rhs.rawValue
   }
