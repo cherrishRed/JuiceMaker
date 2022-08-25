@@ -35,7 +35,9 @@ struct StorageView: View {
           Spacer()
           
           Button {
+            viewModel.saveStock()
             viewRouter.currentPage = "JuiceMenuView"
+            
           } label: {
             Text("💾")
           }
@@ -44,16 +46,13 @@ struct StorageView: View {
         .padding()
 
         List {
-          ForEach(viewModel.fruits.sorted(by: >), id: \.key) { key, value in
-            
-            StorageCellView(viewModel: StorageCellViewModel(fruit: key, count: value))
-            
+          ForEach(viewModel.stock.sorted(by: >), id: \.key) { key, _ in
+            StorageCellView(viewModel: viewModel.childrenViewModel[key]!)
           }
         }
       }
     }
 }
-// 동기화를 해두고 x 상태를 누르면 처음 snapshot 으로 돌아가는 방향으로... 
 
 struct StorageView_Previews: PreviewProvider {
     static var previews: some View {

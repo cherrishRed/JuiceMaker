@@ -6,16 +6,43 @@
 //
 
 import Foundation
+import Combine
 
-class StorageViewModel {
+class StorageViewModel: ObservableObject {
   private let service: JuiceService
-  var fruits: [Fruit: Int]
+  @Published var stock: [Fruit: Int]
+  var childrenViewModel: [Fruit: StorageCellViewModel]
+  var cancelable = Set<AnyCancellable>()
   
   init(service: JuiceService) {
     self.service = service
-    self.fruits = service.stock
+    self.stock = service.stock
+    self.childrenViewModel = [:]
+    
+    for fruit in stock {
+      let childrenVM = StorageCellViewModel(fruit: fruit.key, count: fruit.value)
+      childrenViewModel[fruit.key] = childrenVM
+    }
+    
+    subscriberCellCount()
   }
   
   
+  func subscriberCellCount() {
+    for vm in childrenViewModel {
+      childrenViewModel[vm.key]?.$count
+        .sink(receiveValue: { [weak self] amount in
+          self?.stock[vm.key] = amount
+        })
+        .store(in: &cancelable)
+    }
+  }
   
+  func saveStock() {
+    $stock.sink { [weak self] changedStock in
+      self?.service.stock = changedStock
+    }
+    .store(in: &cancelable)
+    
+  }
 }
