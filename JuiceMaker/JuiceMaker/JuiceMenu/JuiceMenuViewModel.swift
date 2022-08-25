@@ -15,4 +15,8 @@ class JuiceMenuViewModel: ObservableObject {
     self.service = service
     self.juices = service.juices
   }
+  
+  func makeJuice(_ index: Int) {
+    service.makeJuice(juices[index])
+  }
 }

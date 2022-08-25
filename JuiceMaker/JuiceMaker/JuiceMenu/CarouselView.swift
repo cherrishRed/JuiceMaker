@@ -12,15 +12,17 @@ struct CarouselView: View {
   let spacing: CGFloat
   let sideCard: CGFloat
   let focusScale: CGFloat
-  @State var currentIndex = 0
+  @Binding var currentIndex: Int
   @GestureState var offsetState: CGSize = .zero
   @State var offset:CGFloat = 0
   
   init(views: [AnyView],
+       currentIndex: Binding<Int>,
        spacing: CGFloat = 20,
        sideCard: CGFloat = 30,
        focusScale: CGFloat = 1.1) {
     self.views = views
+    self._currentIndex = currentIndex
     self.spacing = spacing
     self.sideCard = sideCard
     self.focusScale = focusScale
@@ -72,12 +74,4 @@ struct CarouselView: View {
     self.offset += (cardSize + spacing)
     currentIndex -= 1
   }
-}
-                 
-struct CarouselView_Previews: PreviewProvider {
-    static var previews: some View {
-      CarouselView(views: [AnyView(Rectangle()),
-                          AnyView(Rectangle()),
-                          AnyView(Rectangle())])
-    }
 }

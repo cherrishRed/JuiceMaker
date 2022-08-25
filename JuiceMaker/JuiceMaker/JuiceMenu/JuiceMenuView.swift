@@ -11,6 +11,7 @@ struct JuiceMenuView: View {
   @State var tag:Int? = nil
   @ObservedObject var viewRouter: ViewRouter
   @ObservedObject var viewModel: JuiceMenuViewModel
+  @State var currentIndex: Int = 0
   
   var body: some View {
     ZStack {
@@ -21,11 +22,12 @@ struct JuiceMenuView: View {
         Text("JuiceMaker")
           .font(Font.custom("BMJUAOTF", size: 36))
           .padding(.top)
-        CarouselView(views: makeCellViews(menu: viewModel.juices))
+        CarouselView(views: makeCellViews(menu: viewModel.juices), currentIndex: $currentIndex)
         
         VStack(spacing: 20) {
           Button {
-            
+            print(currentIndex)
+            viewModel.makeJuice(currentIndex)
           } label: {
             Text("만들기")
               .font(Font.custom("BMJUAOTF", size: 24))
