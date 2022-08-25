@@ -96,6 +96,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA2C72FD28B6AE2A006AAB8B /* CustomJuice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomJuice;
+			sourceTree = "<group>";
+		};
 		DAB0574328A6EDAA00EF7A3A = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +131,7 @@
 				DA2C72F928B55D45006AAB8B /* JuiceMenuView.swift */,
 				DA2C72F728B41209006AAB8B /* CarouselView.swift */,
 				DAB0579828A93E8600EF7A3A /* JuiceCellView.swift */,
+				DA2C72FD28B6AE2A006AAB8B /* CustomJuice */,
 				DAB0579728A93E1000EF7A3A /* Storage */,
 				DAB0578228A705CA00EF7A3A /* CustomButtonStyle.swift */,
 				DAB0577928A6F14100EF7A3A /* Model */,
@@ -197,6 +205,8 @@
 			dependencies = (
 			);
 			name = JuiceMaker;
+			packageProductDependencies = (
+			);
 			productName = JuiceMaker;
 			productReference = DAB0574C28A6EDAA00EF7A3A /* JuiceMaker.app */;
 			productType = "com.apple.product-type.application";
@@ -269,6 +279,8 @@
 				Base,
 			);
 			mainGroup = DAB0574328A6EDAA00EF7A3A;
+			packageReferences = (
+			);
 			productRefGroup = DAB0574D28A6EDAA00EF7A3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

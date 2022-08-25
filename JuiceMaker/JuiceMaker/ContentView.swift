@@ -17,7 +17,7 @@ struct ContentView: View {
           if viewRouter.currentPage == "JuiceMenuView" {
             JuiceMenuView(viewRouter: viewRouter)
             
-          } else if viewRouter.currentPage == "StorageView"{
+          } else if viewRouter.currentPage == "StorageView" {
               StorageView(viewModel: StorageViewModel(), viewRouter: viewRouter)
           }
       }

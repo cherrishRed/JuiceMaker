@@ -7,11 +7,35 @@
 
 import Foundation
 
-struct Fruit: Hashable, Comparable {
-  var name: String
-  var icon: String
-  
+enum Fruit: String, Comparable {
   static func < (lhs: Fruit, rhs: Fruit) -> Bool {
-    lhs.name < rhs.name
+    lhs.rawValue < rhs.rawValue
+  }
+  
+  case strawberry
+  case apple
+  case watermelcon
+  case banana
+  case mango
+  case peach
+  case kiwi
+  
+  var icon: String {
+    switch self {
+    case .strawberry:
+      return "🍓"
+    case .apple:
+      return "🍏"
+    case .watermelcon:
+      return "🍉"
+    case .banana:
+      return "🍌"
+    case .mango:
+      return "🥭"
+    case .peach:
+      return "🍑"
+    case .kiwi:
+      return "🥝"
+    }
   }
 }

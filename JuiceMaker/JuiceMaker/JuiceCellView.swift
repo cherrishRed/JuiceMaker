@@ -123,8 +123,8 @@ struct WaterWave: Shape {
 struct JuiceCellView_Previews: PreviewProvider {
   static var previews: some View {
     JuiceCellView(juice: Juice(name: "딸바주스",
-                               recipe: Recipe(ingredient: [Fruit(name: "딸기", icon: "🍓") : 1,
-                                                           Fruit(name: "바나나", icon: "🍌") : 1]),
+                               recipe: Recipe(ingredient: [.strawberry : 1,
+                                                           .banana: 1]),
                                color: "strawberryPink"))
   }
 }
