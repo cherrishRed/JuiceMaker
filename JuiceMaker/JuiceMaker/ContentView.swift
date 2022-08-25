@@ -16,7 +16,7 @@ struct ContentView: View {
   var body: some View {
        VStack {
           if viewRouter.currentPage == "JuiceMenuView" {
-            JuiceMenuView(viewRouter: viewRouter, service: service)
+            JuiceMenuView(viewRouter: viewRouter, viewModel: JuiceMenuViewModel(service: service))
 
           } else if viewRouter.currentPage == "StorageView" {
             

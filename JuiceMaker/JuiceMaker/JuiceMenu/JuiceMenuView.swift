@@ -9,9 +9,8 @@ import SwiftUI
 
 struct JuiceMenuView: View {
   @State var tag:Int? = nil
-  let mockData = JuiceMaker()
   @ObservedObject var viewRouter: ViewRouter
-  @ObservedObject var service: JuiceService
+  @ObservedObject var viewModel: JuiceMenuViewModel
   
   var body: some View {
     ZStack {
@@ -22,7 +21,7 @@ struct JuiceMenuView: View {
         Text("JuiceMaker")
           .font(Font.custom("BMJUAOTF", size: 36))
           .padding(.top)
-        CarouselView(views: makeCellViews(menu: mockData.menu))
+        CarouselView(views: makeCellViews(menu: viewModel.juices))
         
         VStack(spacing: 20) {
           Button {
@@ -56,6 +55,6 @@ struct JuiceMenuView: View {
 
 struct JuiceMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        JuiceMenuView(viewRouter: ViewRouter(), service: JuiceService())
+      JuiceMenuView(viewRouter: ViewRouter(), viewModel: JuiceMenuViewModel(service: JuiceService()))
     }
 }

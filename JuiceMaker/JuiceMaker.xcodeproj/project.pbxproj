@@ -28,6 +28,7 @@
 		DAB0579928A93E8600EF7A3A /* JuiceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0579828A93E8600EF7A3A /* JuiceCellView.swift */; };
 		DADECF3728B7E94E00603498 /* CustomJuiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF3628B7E94E00603498 /* CustomJuiceView.swift */; };
 		DADECF3A28B81B5B00603498 /* JuiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF3928B81B5B00603498 /* JuiceService.swift */; };
+		DADECF3C28B823C100603498 /* JuiceMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF3B28B823C100603498 /* JuiceMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		DAB0579828A93E8600EF7A3A /* JuiceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceCellView.swift; sourceTree = "<group>"; };
 		DADECF3628B7E94E00603498 /* CustomJuiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJuiceView.swift; sourceTree = "<group>"; };
 		DADECF3928B81B5B00603498 /* JuiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceService.swift; sourceTree = "<group>"; };
+		DADECF3B28B823C100603498 /* JuiceMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2C72F928B55D45006AAB8B /* JuiceMenuView.swift */,
+				DADECF3B28B823C100603498 /* JuiceMenuViewModel.swift */,
 				DA2C72F728B41209006AAB8B /* CarouselView.swift */,
 				DAB0579828A93E8600EF7A3A /* JuiceCellView.swift */,
 			);
@@ -340,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB0577B28A6F26500EF7A3A /* Fruit.swift in Sources */,
+				DADECF3C28B823C100603498 /* JuiceMenuViewModel.swift in Sources */,
 				DAB0579628A844BC00EF7A3A /* StorageCellViewModel.swift in Sources */,
 				DAB0575228A6EDAA00EF7A3A /* ContentView.swift in Sources */,
 				DAB0577D28A6F39A00EF7A3A /* Juice.swift in Sources */,
