@@ -23,6 +23,8 @@ struct JuiceMenuView: View {
           .font(Font.custom("BMJUAOTF", size: 36))
           .padding(.top)
         CarouselView(views: makeCellViews(menu: viewModel.juices), currentIndex: $currentIndex)
+          .frame(height: 400)
+          
         
         VStack(spacing: 20) {
           Button {
