@@ -11,6 +11,7 @@ import Combine
 class CustomJuiceViewModel: ObservableObject {
   @Published var juiceName: String = ""
   @Published var recipe: [(Fruit, Int)] = [(.strawberry, 1)]
+  @Published var selectedColor: Color = .white
   var childrenViewModel: [IngredientViewModel] = [IngredientViewModel(fruit: .strawberry, amount: 1)]
   var cancelable = Set<AnyCancellable>()
 

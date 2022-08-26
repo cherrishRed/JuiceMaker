@@ -21,13 +21,23 @@ struct CustomJuiceView: View {
             .fill(.white)
             .frame(width: 250, height: 50, alignment: .center)
           TextField("주스이름", text: $vm.juiceName)
+            .font(Font.custom("BMJUAOTF", size: 24))
+            .multilineTextAlignment(.center)
             .frame(width: 230, height: 50, alignment: .center)
+        }
+        // 색상
+        ZStack {
+          RoundedRectangle(cornerRadius: 15)
+            .fill(vm.selectedColor)
+            .frame(width: 250, height: 50, alignment: .center)
+          ColorPicker("주스 색상", selection: vm.$selectedColor, supportsOpacity: false)
+            .frame(width: 230, height: 50, alignment: .center)
+            .font(Font.custom("BMJUAOTF", size: 24))
         }
         // 재료 칸
         ForEach(vm.recipe.indices, id: \.self) { index in
           IngredientView(vm: vm.childrenViewModel[index])
         }
-        
         // 버튼
         Button {
           vm.addNewIngredient()
@@ -37,7 +47,7 @@ struct CustomJuiceView: View {
             .font(Font.custom("BMJUAOTF", size: 20))
         }
         .buttonStyle(SimpleRoundButtonStyle())
-        }
+      }
       .padding()
       .background(.yellow)
       .animation(.easeInOut, value: vm.recipe.indices)
