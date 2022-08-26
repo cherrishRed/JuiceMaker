@@ -26,18 +26,18 @@ struct JuiceMenuView: View {
         
         VStack(spacing: 20) {
           Button {
-            print(currentIndex)
-            switch viewModel.makeJuice(currentIndex) {
-            case .success(let juice):
-              print("\(juice.name)나왔습니다.")
-            case.failure(let error):
-              print("\(error)")
-            }
+            viewModel.pushUpMakeButton(index: currentIndex)
           } label: {
             Text("만들기")
               .font(Font.custom("BMJUAOTF", size: 24))
           }
           .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: .red))
+          .alert(isPresented: $viewModel.isShowErrorAlert, error: viewModel.error) {
+            Button("수정할래요", role: .none) {
+              viewRouter.currentPage = "StorageView"
+            }
+            Button("나중에 할께요", role: .none) { }
+          }
           
           Button {
             viewRouter.currentPage = "StorageView"
