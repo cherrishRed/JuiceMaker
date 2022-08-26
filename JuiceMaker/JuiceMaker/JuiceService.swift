@@ -53,10 +53,9 @@ class JuiceService: ObservableObject {
         return .failure(.OutOfStockError)
       }
       
-      let remainAmount = ingredient.value - count
+      let remainAmount = count - ingredient.value
       stock[ingredient.key] = remainAmount
     }
-      print("\(juice.name) 나왔습니다.")
       return .success(juice)
   }
 }
