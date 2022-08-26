@@ -44,8 +44,6 @@ struct CustomJuiceView: View {
     }
 }
 
-
-
 struct IngredientView: View {
   private let fruits: [Fruit] = Fruit.allCases
   @StateObject var vm: CustomJuiceCellViewModel
@@ -105,15 +103,4 @@ struct SimpleRoundButtonStyle: ButtonStyle {
       .background(configuration.isPressed ? .gray : .white)
       .cornerRadius(15)
   }
-}
-
-class CustomJuiceCellViewModel: ObservableObject {
-  @Published var fruit: Fruit
-  @Published var amount: Int
-  
-  init(fruit: Fruit, amount: Int) {
-    self.fruit = fruit
-    self.amount = amount
-  }
-
 }
