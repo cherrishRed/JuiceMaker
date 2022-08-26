@@ -19,7 +19,21 @@ struct CustomJuiceView: View {
   }
   
     var body: some View {
+      ZStack {
+        Rectangle()
+          .fill(.yellow)
+          .ignoresSafeArea()
       VStack(alignment: .center) {
+        VStack(alignment: .leading) {
+          Button {
+            viewRouter.currentPage = "JuiceMenuView"
+          } label: {
+            Text("🏠")
+          }
+          .buttonStyle(NavButtonStyle(backgroundColor: .white, shadowColor: .blue))
+        }
+        .frame(width: 300, height: 50, alignment: .leading)
+        .padding(.bottom, 30)
         // 주스 이름 입력칸
         ZStack {
           RoundedRectangle(cornerRadius: 15)
@@ -60,10 +74,11 @@ struct CustomJuiceView: View {
             .font(Font.custom("BMJUAOTF", size: 24))
         }
         .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: .orange))
+        .padding(.top, 30)
       }
       .padding()
-      .background(.yellow)
       .animation(.easeInOut, value: vm.recipe.indices)
+      }
     }
 }
 

@@ -16,7 +16,7 @@ struct ContentView: View {
   var body: some View {
        VStack {
           if viewRouter.currentPage == "JuiceMenuView" {
-            JuiceMenuView(viewRouter: viewRouter, viewModel: JuiceMenuViewModel(service: service))
+            JuiceMenuView(viewRouter: viewRouter, viewModel: JuiceMenuViewModel(service: service, viewRouter: viewRouter))
 
           } else if viewRouter.currentPage == "StorageView" {
             
@@ -40,7 +40,7 @@ class ViewRouter : ObservableObject{
     
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
     
-    var currentPage: String = "CustomJuiceView" {
+    var currentPage: String = "JuiceMenuView" {
         didSet{
             objectWillChange.send(self)
         }

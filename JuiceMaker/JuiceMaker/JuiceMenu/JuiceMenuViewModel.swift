@@ -5,17 +5,19 @@
 //  Created by RED on 2022/08/26.
 //
 
-import Foundation
+import SwiftUI
 
 class JuiceMenuViewModel: ObservableObject {
   private let service: JuiceService
+  var viewRouter: ViewRouter
   @Published var juices: [Juice]
   @Published var isShowErrorAlert = false
   @Published var error: MakeJuiceError = .NoneKeyError
   
-  init(service: JuiceService) {
+  init(service: JuiceService, viewRouter: ViewRouter) {
     self.service = service
     self.juices = service.juices
+    self.viewRouter = viewRouter
   }
   
   private func makeJuice(_ index: Int) -> Result<Juice, MakeJuiceError> {
@@ -32,5 +34,18 @@ class JuiceMenuViewModel: ObservableObject {
       self.isShowErrorAlert = true
       print("\(error)")
     }
+  }
+  
+  private func makeCellButton() -> AnyView {
+    return AnyView(NewRecipeButtonView(viewRouter: viewRouter))
+  }
+  
+  func makeCellViews(menu: [Juice]) -> [AnyView] {
+    var views: [AnyView] = []
+    for juice in menu {
+      views.append(AnyView(JuiceCellView(juice: juice)))
+    }
+    views.append(makeCellButton())
+    return views
   }
 }

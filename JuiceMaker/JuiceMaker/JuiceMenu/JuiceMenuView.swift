@@ -22,7 +22,7 @@ struct JuiceMenuView: View {
         Text("JuiceMaker")
           .font(Font.custom("BMJUAOTF", size: 36))
           .padding(.top)
-        CarouselView(views: makeCellViews(menu: viewModel.juices), currentIndex: $currentIndex)
+        CarouselView(views: viewModel.makeCellViews(menu: viewModel.juices), currentIndex: $currentIndex)
           .frame(height: 400)
           
         
@@ -51,19 +51,24 @@ struct JuiceMenuView: View {
       }
     }
   }
-
-  
-  func makeCellViews(menu: [Juice]) -> [AnyView] {
-    var views: [AnyView] = []
-    for juice in menu {
-      views.append(AnyView(JuiceCellView(juice: juice)))
-    }
-    return views
-  }
 }
 
 struct JuiceMenuView_Previews: PreviewProvider {
     static var previews: some View {
-      JuiceMenuView(viewRouter: ViewRouter(), viewModel: JuiceMenuViewModel(service: JuiceService()))
+      JuiceMenuView(viewRouter: ViewRouter(), viewModel: JuiceMenuViewModel(service: JuiceService(), viewRouter: ViewRouter()))
     }
+}
+
+struct NewRecipeButtonView : View {
+  @ObservedObject var viewRouter: ViewRouter
+  var body: some View {
+    Button {
+      viewRouter.currentPage = "CustomJuiceView"
+    } label: {
+      Text("나만의 \n새로운 주스 레시피\n등록하기!")
+        .font(Font.custom("BMJUAOTF", size: 24))
+        .multilineTextAlignment(.center)
+    }
+    .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: .red))
+  }
 }
