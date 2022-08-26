@@ -5,7 +5,7 @@
 //  Created by RED on 2022/08/26.
 //
 
-import Foundation
+import SwiftUI
 
 class JuiceService: ObservableObject {
   @Published var stock: [Fruit: Int]
@@ -18,11 +18,11 @@ class JuiceService: ObservableObject {
                             .banana: 6,
                             .mango: 7,
                             .kiwi: 8],
-       juices: [Juice] = [Juice(name: "딸기 주스", recipe: Recipe(ingredient: [.strawberry: 10]), color: "strawberryPink"),
-                          Juice(name: "사과 주스",recipe: Recipe(ingredient: [.apple: 3]), color: "appleGreen"),
-                          Juice(name: "수박 주스",recipe: Recipe(ingredient: [.watermelcon: 1]), color: "watermelonRed"),
-                          Juice(name: "바나나 주스",recipe: Recipe(ingredient: [.banana: 5]), color: "bananaYellow"),
-                          Juice(name: "망고 주스",recipe: Recipe(ingredient: [.mango: 4]), color: "mangoYellow")]) {
+       juices: [Juice] = [Juice(name: "딸기 주스", recipe: Recipe(ingredient: [.strawberry: 10]), color: Color("strawberryPink")),
+                          Juice(name: "사과 주스",recipe: Recipe(ingredient: [.apple: 3]), color: Color("appleGreen")),
+                          Juice(name: "수박 주스",recipe: Recipe(ingredient: [.watermelcon: 1]), color: Color("watermelonRed")),
+                          Juice(name: "바나나 주스",recipe: Recipe(ingredient: [.banana: 5]), color: Color("bananaYellow")),
+                          Juice(name: "망고 주스",recipe: Recipe(ingredient: [.mango: 4]), color: Color("mangoYellow"))]) {
     self.stock = stock
     self.juices = juices
   }

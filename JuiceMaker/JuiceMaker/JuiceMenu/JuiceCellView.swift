@@ -61,7 +61,7 @@ extension JuiceCellView {
           .frame(width: 120, height: 120)
       
       WaterWave(progress: 0.8, waveHeight: 0.3, offset: startAnimation)
-        .fill(Color(juice.color))
+        .fill(juice.color)
         .frame(width: 110, height: 110)
         .mask {
           CupShape()
@@ -125,7 +125,7 @@ struct JuiceCellView_Previews: PreviewProvider {
     JuiceCellView(juice: Juice(name: "딸바주스",
                                recipe: Recipe(ingredient: [.strawberry : 1,
                                                            .banana: 1]),
-                               color: "strawberryPink"))
+                               color: Color("strawberryPink")))
   }
 }
 

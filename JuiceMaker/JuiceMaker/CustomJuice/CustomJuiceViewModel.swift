@@ -12,10 +12,12 @@ class CustomJuiceViewModel: ObservableObject {
   @Published var juiceName: String = ""
   @Published var recipe: [(Fruit, Int)] = [(.strawberry, 1)]
   @Published var selectedColor: Color = .white
+  private let service: JuiceService
   var childrenViewModel: [IngredientViewModel] = [IngredientViewModel(fruit: .strawberry, amount: 1)]
   var cancelable = Set<AnyCancellable>()
 
-  init() {
+  init(service: JuiceService) {
+    self.service = service
     subscriberCellFruit()
     subscriberCellAmount()
   }
@@ -58,5 +60,17 @@ class CustomJuiceViewModel: ObservableObject {
         })
       .store(in: &cancelable)
     }
+  }
+  
+  func saveNewJuiceRecipe() {
+    let newRecipe: Recipe = Recipe(ingredient: [:])
+    recipe.forEach { (fruit, amount) in
+      newRecipe.ingredient[fruit] = amount
+    }
+    
+    service.juices.append(Juice(name: juiceName, recipe: newRecipe, color: selectedColor))
+    print("\(service.juices)")
+    // 조건 이름에 주스가 있어야 한다.
+    // 같은 과일을 두개 넣는 것은 안된다.
   }
 }

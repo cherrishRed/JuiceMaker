@@ -24,7 +24,7 @@ struct ContentView: View {
             
           } else if viewRouter.currentPage == "CustomJuiceView" {
             
-            CustomJuiceView(viewRouter: viewRouter)
+            CustomJuiceView(viewRouter: viewRouter, vm: CustomJuiceViewModel(service: service))
         }
       }
   }

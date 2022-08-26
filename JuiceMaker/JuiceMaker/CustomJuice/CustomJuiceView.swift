@@ -10,8 +10,13 @@ import Combine
 
 struct CustomJuiceView: View {
   @ObservedObject var viewRouter: ViewRouter
-  var fruits: [Fruit] = Fruit.allCases
-  @StateObject var vm: CustomJuiceViewModel = CustomJuiceViewModel()
+  @ObservedObject var vm: CustomJuiceViewModel
+  private var fruits: [Fruit] = Fruit.allCases
+  
+  init(viewRouter: ViewRouter, vm: CustomJuiceViewModel) {
+    self.viewRouter = viewRouter
+    self.vm = vm
+  }
   
     var body: some View {
       VStack(alignment: .center) {
@@ -47,6 +52,14 @@ struct CustomJuiceView: View {
             .font(Font.custom("BMJUAOTF", size: 20))
         }
         .buttonStyle(SimpleRoundButtonStyle())
+        
+        Button {
+          vm.saveNewJuiceRecipe()
+        } label: {
+          Text("새로운 레시피 추가!")
+            .font(Font.custom("BMJUAOTF", size: 24))
+        }
+        .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: .orange))
       }
       .padding()
       .background(.yellow)
@@ -58,7 +71,7 @@ struct CustomJuiceView: View {
 
 struct CustomJuiceView_Previews: PreviewProvider {
     static var previews: some View {
-      CustomJuiceView(viewRouter: ViewRouter())
+      CustomJuiceView(viewRouter: ViewRouter(), vm: CustomJuiceViewModel(service: JuiceService()))
     }
 }
 
