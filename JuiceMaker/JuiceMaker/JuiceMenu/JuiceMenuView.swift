@@ -27,7 +27,12 @@ struct JuiceMenuView: View {
         VStack(spacing: 20) {
           Button {
             print(currentIndex)
-            viewModel.makeJuice(currentIndex)
+            switch viewModel.makeJuice(currentIndex) {
+            case .success(let juice):
+              print("\(juice.name)나왔습니다.")
+            case.failure(let error):
+              print("\(error)")
+            }
           } label: {
             Text("만들기")
               .font(Font.custom("BMJUAOTF", size: 24))

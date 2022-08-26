@@ -43,17 +43,20 @@ class JuiceService: ObservableObject {
     juices.append(juice)
   }
   
-  func makeJuice(_ juice: Juice) {
+  func makeJuice(_ juice: Juice) -> Result<Juice, MakeJuiceError> {
     for ingredient in juice.recipe.ingredient {
-      guard let count = stock[ingredient.key] else { return }
-      if count < ingredient.value {
-        print("재료 모자람")
-      } else {
-        let remainAmount = ingredient.value - count
-        stock[ingredient.key] = remainAmount
-        print("\(juice.name) 나왔습니다.")
+      guard let count = stock[ingredient.key] else {
+        return .failure(.NoneKeyError)
       }
+      
+      if count < ingredient.value {
+        return .failure(.OutOfStockError)
+      }
+      
+      let remainAmount = ingredient.value - count
+      stock[ingredient.key] = remainAmount
     }
+      print("\(juice.name) 나왔습니다.")
+      return .success(juice)
   }
-  
 }
