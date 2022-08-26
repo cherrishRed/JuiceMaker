@@ -30,7 +30,7 @@ struct CustomJuiceView: View {
           RoundedRectangle(cornerRadius: 15)
             .fill(vm.selectedColor)
             .frame(width: 250, height: 50, alignment: .center)
-          ColorPicker("주스 색상", selection: vm.$selectedColor, supportsOpacity: false)
+          ColorPicker("주스 색상", selection: $vm.selectedColor, supportsOpacity: false)
             .frame(width: 230, height: 50, alignment: .center)
             .font(Font.custom("BMJUAOTF", size: 24))
         }

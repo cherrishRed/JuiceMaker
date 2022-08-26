@@ -5,7 +5,7 @@
 //  Created by RED on 2022/08/27.
 //
 
-import Foundation
+import SwiftUI
 import Combine
 
 class CustomJuiceViewModel: ObservableObject {
