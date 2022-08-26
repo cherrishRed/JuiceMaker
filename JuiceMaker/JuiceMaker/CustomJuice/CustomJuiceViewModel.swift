@@ -11,7 +11,7 @@ import Combine
 class CustomJuiceViewModel: ObservableObject {
   @Published var juiceName: String = ""
   @Published var recipe: [(Fruit, Int)] = [(.strawberry, 1)]
-  var childrenViewModel: [CustomJuiceCellViewModel] = [CustomJuiceCellViewModel(fruit: .strawberry, amount: 1)]
+  var childrenViewModel: [IngredientViewModel] = [IngredientViewModel(fruit: .strawberry, amount: 1)]
   var cancelable = Set<AnyCancellable>()
 
   init() {
@@ -21,7 +21,7 @@ class CustomJuiceViewModel: ObservableObject {
   
   func addNewIngredient() {
     recipe.append((.strawberry, 1))
-    childrenViewModel.append(CustomJuiceCellViewModel(fruit: .strawberry, amount: 1))
+    childrenViewModel.append(IngredientViewModel(fruit: .strawberry, amount: 1))
     subscriberCellFruit()
     subscriberCellAmount()
   }

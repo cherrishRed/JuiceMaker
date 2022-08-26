@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IngredientView: View {
   private let fruits: [Fruit] = Fruit.allCases
-  @StateObject var vm: CustomJuiceCellViewModel
+  @StateObject var vm: IngredientViewModel
   
   var body: some View {
     ZStack {
@@ -53,7 +53,7 @@ struct IngredientView: View {
 
 struct IngredientView_Previews: PreviewProvider {
     static var previews: some View {
-      IngredientView(vm: CustomJuiceCellViewModel(fruit: .strawberry, amount: 10))
+      IngredientView(vm: IngredientViewModel(fruit: .strawberry, amount: 10))
         .previewLayout(.sizeThatFits)
     }
 }

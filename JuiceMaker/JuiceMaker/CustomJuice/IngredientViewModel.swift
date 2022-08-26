@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CustomJuiceCellViewModel: ObservableObject {
+class IngredientViewModel: ObservableObject {
   @Published var fruit: Fruit
   @Published var amount: Int
   
