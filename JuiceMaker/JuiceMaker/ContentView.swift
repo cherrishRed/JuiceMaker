@@ -24,7 +24,7 @@ struct ContentView: View {
             
           } else if viewRouter.currentPage == "CustomJuiceView" {
             
-            CustomJuiceView(viewRouter: viewRouter, juiceName: "")
+            CustomJuiceView(viewRouter: viewRouter)
         }
       }
   }
@@ -40,7 +40,7 @@ class ViewRouter : ObservableObject{
     
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
     
-    var currentPage: String = "JuiceMenuView" {
+    var currentPage: String = "CustomJuiceView" {
         didSet{
             objectWillChange.send(self)
         }
