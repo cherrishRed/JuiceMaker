@@ -34,6 +34,7 @@
 		DADECF5C28B9382D00603498 /* IngredientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF5B28B9382C00603498 /* IngredientViewModel.swift */; };
 		DADECF5E28B9392400603498 /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF5D28B9392400603498 /* IngredientView.swift */; };
 		DADECF6128BAB8F900603498 /* JuiceMakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF6028BAB8F900603498 /* JuiceMakingView.swift */; };
+		DADECF6328BAE7BB00603498 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF6228BAE7B900603498 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		DADECF5B28B9382C00603498 /* IngredientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewModel.swift; sourceTree = "<group>"; };
 		DADECF5D28B9392400603498 /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
 		DADECF6028BAB8F900603498 /* JuiceMakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakingView.swift; sourceTree = "<group>"; };
+		DADECF6228BAE7B900603498 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				DAB0575128A6EDAA00EF7A3A /* ContentView.swift */,
 				DADECF3928B81B5B00603498 /* JuiceService.swift */,
 				DADECF5728B8A07200603498 /* MakeJuiceError.swift */,
+				DADECF6228BAE7B900603498 /* HapticManager.swift */,
 				DADECF5F28BAB8D400603498 /* JuiceMakingView */,
 				DADECF3828B81B1A00603498 /* JuiceMenu */,
 				DA2C72FD28B6AE2A006AAB8B /* CustomJuice */,
@@ -203,8 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				DAB0578428A7066A00EF7A3A /* StorageView.swift */,
-				DAB0578628A7071A00EF7A3A /* StorageViewModel.swift */,
 				DAB0579328A83CFD00EF7A3A /* StorageCellView.swift */,
+				DAB0578628A7071A00EF7A3A /* StorageViewModel.swift */,
 				DAB0579528A844BC00EF7A3A /* StorageCellViewModel.swift */,
 			);
 			path = Storage;
@@ -382,6 +385,7 @@
 				DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */,
 				DAB0578528A7066A00EF7A3A /* StorageView.swift in Sources */,
 				DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */,
+				DADECF6328BAE7BB00603498 /* HapticManager.swift in Sources */,
 				DADECF3728B7E94E00603498 /* CustomJuiceView.swift in Sources */,
 				DAB0578328A705CB00EF7A3A /* CustomButtonStyle.swift in Sources */,
 				DADECF5E28B9392400603498 /* IngredientView.swift in Sources */,
@@ -543,6 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JuiceMaker/Preview Content\"";
+				DEVELOPMENT_TEAM = LZZV4V63N5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JuiceMaker/Info.plist;
@@ -572,6 +577,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JuiceMaker/Preview Content\"";
+				DEVELOPMENT_TEAM = LZZV4V63N5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JuiceMaker/Info.plist;
