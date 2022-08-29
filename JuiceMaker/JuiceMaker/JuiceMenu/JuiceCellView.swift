@@ -20,7 +20,7 @@ struct JuiceCellView: View {
         RoundedRectangle(cornerRadius: 20)
           .fill(.white)
         VStack(spacing: 20) {
-          juiceImageView
+          JuiceImageView(startAnimation: startAnimation, juice: juice)
             .padding()
           Text("\(juice.name)")
             .font(Font.custom("BMJUAOTF", size: 40))
@@ -49,8 +49,12 @@ extension JuiceCellView {
   }
 }
 
-extension JuiceCellView {
-  var juiceImageView: some View {
+struct JuiceImageView: View {
+  @State var startAnimation: CGFloat = 0
+  var juice: Juice
+  var progress: CGFloat = 0.8
+  
+  var body: some View {
     ZStack {
       CupShape()
         .stroke(Color("glassBlue"), style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
@@ -60,7 +64,7 @@ extension JuiceCellView {
         .fill(Color("glassBlue"))
           .frame(width: 120, height: 120)
       
-      WaterWave(progress: 0.8, waveHeight: 0.3, offset: startAnimation)
+      WaterWave(progress: progress, waveHeight: 0.3, offset: startAnimation)
         .fill(juice.color)
         .frame(width: 110, height: 110)
         .mask {
@@ -97,6 +101,11 @@ struct WaterWave: Shape {
   var animatableData: CGFloat {
     get {offset}
     set {offset = newValue}
+  }
+  
+  var animatableProgress: CGFloat {
+    get {progress}
+    set {progress = newValue}
   }
   
   func path(in rect: CGRect) -> Path {
