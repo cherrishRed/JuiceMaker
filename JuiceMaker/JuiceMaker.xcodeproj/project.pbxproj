@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA2C72F828B41209006AAB8B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C72F728B41209006AAB8B /* CarouselView.swift */; };
 		DA2C72FA28B55D45006AAB8B /* JuiceMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C72F928B55D45006AAB8B /* JuiceMenuView.swift */; };
+		DA36941A28BC9FCB006C6193 /* JuiceServeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36941928BC9FCB006C6193 /* JuiceServeView.swift */; };
 		DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0574F28A6EDAA00EF7A3A /* JuiceMakerApp.swift */; };
 		DAB0575228A6EDAA00EF7A3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0575128A6EDAA00EF7A3A /* ContentView.swift */; };
 		DAB0575428A6EDAD00EF7A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB0575328A6EDAD00EF7A3A /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		DA2C72F728B41209006AAB8B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		DA2C72F928B55D45006AAB8B /* JuiceMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenuView.swift; sourceTree = "<group>"; };
+		DA36941928BC9FCB006C6193 /* JuiceServeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceServeView.swift; sourceTree = "<group>"; };
 		DAB0574C28A6EDAA00EF7A3A /* JuiceMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuiceMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB0574F28A6EDAA00EF7A3A /* JuiceMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerApp.swift; sourceTree = "<group>"; };
 		DAB0575128A6EDAA00EF7A3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				DADECF6028BAB8F900603498 /* JuiceMakingView.swift */,
+				DA36941928BC9FCB006C6193 /* JuiceServeView.swift */,
 			);
 			path = JuiceMakingView;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				DAB0579428A83CFD00EF7A3A /* StorageCellView.swift in Sources */,
 				DA2C72FA28B55D45006AAB8B /* JuiceMenuView.swift in Sources */,
 				DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */,
+				DA36941A28BC9FCB006C6193 /* JuiceServeView.swift in Sources */,
 				DAB0578528A7066A00EF7A3A /* StorageView.swift in Sources */,
 				DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */,
 				DADECF6328BAE7BB00603498 /* HapticManager.swift in Sources */,
