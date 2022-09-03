@@ -40,6 +40,11 @@ struct JuiceMenuView: View {
             }
             Button("나중에 할께요", role: .none) { }
           }
+          .alert("\(viewModel.juice.name) 나왔습니다! "
+                 , isPresented: $viewModel.isShowSuccessAlert) {
+            Button("잘 먹겠습니다.", role: .none) {
+            }
+          }
           
           Button {
             viewRouter.currentPage = "StorageView"
