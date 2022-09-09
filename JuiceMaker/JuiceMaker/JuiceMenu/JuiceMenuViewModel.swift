@@ -45,6 +45,7 @@ class JuiceMenuViewModel: ObservableObject {
   }
   
   private func makeCellButton() -> AnyView {
+    // 여기 뭔가 로직이 이상함 뷰모델이 뷰를 너무 잘아는데?
     return AnyView(NewRecipeButtonView(viewRouter: viewRouter))
   }
   

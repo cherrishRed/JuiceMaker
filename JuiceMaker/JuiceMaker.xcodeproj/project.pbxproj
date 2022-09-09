@@ -14,7 +14,6 @@
 		DA2251FE28C3E7C700570BBB /* StorageCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2251FB28C3E78000570BBB /* StorageCellViewModelTest.swift */; };
 		DA2C72F828B41209006AAB8B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C72F728B41209006AAB8B /* CarouselView.swift */; };
 		DA2C72FA28B55D45006AAB8B /* JuiceMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C72F928B55D45006AAB8B /* JuiceMenuView.swift */; };
-		DA36941A28BC9FCB006C6193 /* JuiceServeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36941928BC9FCB006C6193 /* JuiceServeView.swift */; };
 		DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0574F28A6EDAA00EF7A3A /* JuiceMakerApp.swift */; };
 		DAB0575228A6EDAA00EF7A3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0575128A6EDAA00EF7A3A /* ContentView.swift */; };
 		DAB0575428A6EDAD00EF7A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB0575328A6EDAD00EF7A3A /* Assets.xcassets */; };
@@ -38,7 +37,6 @@
 		DADECF5A28B9286400603498 /* CustomJuiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF5928B9286400603498 /* CustomJuiceViewModel.swift */; };
 		DADECF5C28B9382D00603498 /* IngredientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF5B28B9382C00603498 /* IngredientViewModel.swift */; };
 		DADECF5E28B9392400603498 /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF5D28B9392400603498 /* IngredientView.swift */; };
-		DADECF6128BAB8F900603498 /* JuiceMakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF6028BAB8F900603498 /* JuiceMakingView.swift */; };
 		DADECF6328BAE7BB00603498 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADECF6228BAE7B900603498 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +65,6 @@
 		DA2251FB28C3E78000570BBB /* StorageCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCellViewModelTest.swift; sourceTree = "<group>"; };
 		DA2C72F728B41209006AAB8B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		DA2C72F928B55D45006AAB8B /* JuiceMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenuView.swift; sourceTree = "<group>"; };
-		DA36941928BC9FCB006C6193 /* JuiceServeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceServeView.swift; sourceTree = "<group>"; };
 		DAB0574C28A6EDAA00EF7A3A /* JuiceMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuiceMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB0574F28A6EDAA00EF7A3A /* JuiceMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakerApp.swift; sourceTree = "<group>"; };
 		DAB0575128A6EDAA00EF7A3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		DADECF5928B9286400603498 /* CustomJuiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJuiceViewModel.swift; sourceTree = "<group>"; };
 		DADECF5B28B9382C00603498 /* IngredientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewModel.swift; sourceTree = "<group>"; };
 		DADECF5D28B9392400603498 /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
-		DADECF6028BAB8F900603498 /* JuiceMakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMakingView.swift; sourceTree = "<group>"; };
 		DADECF6228BAE7B900603498 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +159,6 @@
 				DADECF3928B81B5B00603498 /* JuiceService.swift */,
 				DADECF5728B8A07200603498 /* MakeJuiceError.swift */,
 				DADECF6228BAE7B900603498 /* HapticManager.swift */,
-				DADECF5F28BAB8D400603498 /* JuiceMakingView */,
 				DADECF3828B81B1A00603498 /* JuiceMenu */,
 				DA2C72FD28B6AE2A006AAB8B /* CustomJuice */,
 				DAB0579728A93E1000EF7A3A /* Storage */,
@@ -236,15 +231,6 @@
 				DAB0579828A93E8600EF7A3A /* JuiceCellView.swift */,
 			);
 			path = JuiceMenu;
-			sourceTree = "<group>";
-		};
-		DADECF5F28BAB8D400603498 /* JuiceMakingView */ = {
-			isa = PBXGroup;
-			children = (
-				DADECF6028BAB8F900603498 /* JuiceMakingView.swift */,
-				DA36941928BC9FCB006C6193 /* JuiceServeView.swift */,
-			);
-			path = JuiceMakingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +371,6 @@
 			files = (
 				DAB0577B28A6F26500EF7A3A /* Fruit.swift in Sources */,
 				DADECF3C28B823C100603498 /* JuiceMenuViewModel.swift in Sources */,
-				DADECF6128BAB8F900603498 /* JuiceMakingView.swift in Sources */,
 				DADECF5A28B9286400603498 /* CustomJuiceViewModel.swift in Sources */,
 				DAB0579628A844BC00EF7A3A /* StorageCellViewModel.swift in Sources */,
 				DAB0575228A6EDAA00EF7A3A /* ContentView.swift in Sources */,
@@ -398,7 +383,6 @@
 				DAB0579428A83CFD00EF7A3A /* StorageCellView.swift in Sources */,
 				DA2C72FA28B55D45006AAB8B /* JuiceMenuView.swift in Sources */,
 				DAB0575028A6EDAA00EF7A3A /* JuiceMakerApp.swift in Sources */,
-				DA36941A28BC9FCB006C6193 /* JuiceServeView.swift in Sources */,
 				DAB0578528A7066A00EF7A3A /* StorageView.swift in Sources */,
 				DAB0577F28A6F5EF00EF7A3A /* Recipe.swift in Sources */,
 				DADECF6328BAE7BB00603498 /* HapticManager.swift in Sources */,
