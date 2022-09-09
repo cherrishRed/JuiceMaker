@@ -7,7 +7,17 @@
 
 import SwiftUI
 
-class JuiceService: ObservableObject {
+protocol JuiceServiceable {
+  func plusStock(fruit: Fruit)
+  func minusStock(fruit: Fruit, count: Int)
+  func addNewJuice(_ juice: Juice)
+  func makeJuice(_ juice: Juice) -> Result<Juice, MakeJuiceError>
+  func change(stock: [Fruit: Int])
+}
+
+
+
+class JuiceService: ObservableObject, JuiceServiceable {
   @Published var stock: [Fruit: Int]
   @Published var juices: [Juice]
   
@@ -57,5 +67,9 @@ class JuiceService: ObservableObject {
       stock[ingredient.key] = remainAmount
     }
       return .success(juice)
+  }
+  
+  func change(stock: [Fruit : Int]) {
+    self.stock = stock
   }
 }

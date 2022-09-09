@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class StorageViewModel: ObservableObject {
-  private let service: JuiceService
+  private let service: JuiceServiceable
   @Published var stock: [Fruit: Int]
   var childrenViewModel: [Fruit: StorageCellViewModel]
   var cancelable = Set<AnyCancellable>()
@@ -40,9 +40,8 @@ class StorageViewModel: ObservableObject {
   
   func saveStock() {
     $stock.sink { [weak self] changedStock in
-      self?.service.stock = changedStock
+      self?.service.change(stock: changedStock)
     }
     .store(in: &cancelable)
-    
   }
 }

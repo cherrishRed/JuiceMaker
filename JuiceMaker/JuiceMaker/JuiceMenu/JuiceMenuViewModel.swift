@@ -8,7 +8,7 @@
 import SwiftUI
 
 class JuiceMenuViewModel: ObservableObject {
-  private let service: JuiceService
+  private let service: JuiceServiceable
   var viewRouter: ViewRouter
   @Published var juices: [Juice]
   @Published var isShowErrorAlert: Bool
