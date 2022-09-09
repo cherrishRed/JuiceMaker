@@ -73,10 +73,32 @@ final class SpyJuiceService: JuiceServiceable {
   }
   
   func makeJuice(_ juice: Juice) -> Result<Juice, MakeJuiceError> {
-    return .success(Juice(name: "", recipe: .init(ingredient: [:]), color: .red))
+    if juice.name == "성공주스" {
+      return .success(Juice(name: "성공주스", recipe: .init(ingredient: [:]), color: .red))
+    } else if juice.name == "재고부족" {
+      return .failure(.OutOfStockError)
+    } else {
+      return .failure(.NoneKeyError)
+    }
   }
   
   func change(stock: [Fruit : Int]) {
     //
   }
 }
+
+//func makeJuice(_ juice: Juice) -> Result<Juice, MakeJuiceError> {
+//  for ingredient in juice.recipe.ingredient {
+//    guard let count = stock[ingredient.key] else {
+//      return .failure(.NoneKeyError)
+//    }
+//    
+//    if count < ingredient.value {
+//      return .failure(.OutOfStockError)
+//    }
+//    
+//    let remainAmount = count - ingredient.value
+//    stock[ingredient.key] = remainAmount
+//  }
+//    return .success(juice)
+//}

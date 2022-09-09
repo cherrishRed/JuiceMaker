@@ -16,7 +16,7 @@ class JuiceMenuViewModel: ObservableObject {
   @Published var error: MakeJuiceError
   @Published var juice: Juice
   
-  init(service: JuiceService, viewRouter: ViewRouter) {
+  init(service: JuiceServiceable, viewRouter: ViewRouter) {
     self.service = service
     self.juices = service.juices
     self.viewRouter = viewRouter
