@@ -57,6 +57,7 @@ class CustomJuiceViewModelTest: XCTestCase {
 }
 
 final class SpyJuiceService: JuiceServiceable {
+  var stock: [Fruit : Int] = [:]
   var juices: [Juice] = []
   
   func plusStock(fruit: Fruit) {

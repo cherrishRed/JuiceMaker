@@ -8,6 +8,9 @@
 import SwiftUI
 
 protocol JuiceServiceable {
+  var stock: [Fruit: Int] { get }
+  var juices: [Juice] { get }
+  
   func plusStock(fruit: Fruit)
   func minusStock(fruit: Fruit, count: Int)
   func addNewJuice(_ juice: Juice)
