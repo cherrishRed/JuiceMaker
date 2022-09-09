@@ -14,7 +14,7 @@ class StorageViewModel: ObservableObject {
   var childrenViewModel: [Fruit: StorageCellViewModel]
   var cancelable = Set<AnyCancellable>()
   
-  init(service: JuiceService) {
+  init(service: JuiceServiceable) {
     self.service = service
     self.stock = service.stock
     self.childrenViewModel = [:]
@@ -26,7 +26,6 @@ class StorageViewModel: ObservableObject {
     
     subscriberCellCount()
   }
-  
   
   func subscriberCellCount() {
     for vm in childrenViewModel {

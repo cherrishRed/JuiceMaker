@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA220F2028CAC6A900EBCD85 /* CustomJuiceViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA220F1F28CAC6A900EBCD85 /* CustomJuiceViewModelTest.swift */; };
+		DA220F2228CAF09200EBCD85 /* StorageViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA220F2128CAF09200EBCD85 /* StorageViewModelTest.swift */; };
 		DA2251FE28C3E7C700570BBB /* StorageCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2251FB28C3E78000570BBB /* StorageCellViewModelTest.swift */; };
 		DA2C72F828B41209006AAB8B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C72F728B41209006AAB8B /* CarouselView.swift */; };
 		DA2C72FA28B55D45006AAB8B /* JuiceMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C72F928B55D45006AAB8B /* JuiceMenuView.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		DA220F1F28CAC6A900EBCD85 /* CustomJuiceViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJuiceViewModelTest.swift; sourceTree = "<group>"; };
+		DA220F2128CAF09200EBCD85 /* StorageViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewModelTest.swift; sourceTree = "<group>"; };
 		DA2251FB28C3E78000570BBB /* StorageCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCellViewModelTest.swift; sourceTree = "<group>"; };
 		DA2C72F728B41209006AAB8B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		DA2C72F928B55D45006AAB8B /* JuiceMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMenuView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				DAB0576028A6EDAD00EF7A3A /* JuiceMakerTests.swift */,
 				DA2251FB28C3E78000570BBB /* StorageCellViewModelTest.swift */,
+				DA220F2128CAF09200EBCD85 /* StorageViewModelTest.swift */,
 				DA220F1F28CAC6A900EBCD85 /* CustomJuiceViewModelTest.swift */,
 			);
 			path = JuiceMakerTests;
@@ -410,6 +413,7 @@
 			files = (
 				DA2251FE28C3E7C700570BBB /* StorageCellViewModelTest.swift in Sources */,
 				DA220F2028CAC6A900EBCD85 /* CustomJuiceViewModelTest.swift in Sources */,
+				DA220F2228CAF09200EBCD85 /* StorageViewModelTest.swift in Sources */,
 				DAB0576128A6EDAD00EF7A3A /* JuiceMakerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

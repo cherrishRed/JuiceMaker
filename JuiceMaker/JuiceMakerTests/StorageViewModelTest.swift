@@ -1,36 +1,43 @@
-//
+ //
 //  StorageViewModelTest.swift
 //  JuiceMakerTests
 //
-//  Created by RED on 2022/09/04.
+//  Created by RED on 2022/09/09.
 //
 
 import XCTest
 @testable import JuiceMaker
 
 class StorageViewModelTest: XCTestCase {
-  var sut: StorageViewModel!
-  var service: mockServiceprotocol
+    var sut: StorageViewModel!
+    let spyJuiceService = SpyJuiceService()
   
     override func setUpWithError() throws {
-      sut = StorageViewModel(service: JuiceService())
+      spyJuiceService.stock = [.kiwi: 2]
+      sut = StorageViewModel(service: spyJuiceService)
     }
 
     override func tearDownWithError() throws {
       sut = nil
     }
+
+  func test_subscriberCellCount호출시() {
+    // given
+    let expectResult = 2
+    // when
+    sut.subscriberCellCount()
+    let result = sut.stock[.kiwi]!
+    // then
+    XCTAssertEqual(expectResult, result)
+  }
   
-    func test_subscriberCellCount호출시() {
-    
-    }
-  
-    func test_saveStock호출시() {
-      //strawberry 개수를 12 개에서 1개로 변경
-      sut.stock[.strawberry] = 1
-      //
-      sut.saveStock()
-      //
-      let result = sut.service.stock[.strawberry]
-      XCTAssertEqual(1, result)
-    }
+  func test_saveStock() {
+    // given
+    let expectResult: [Fruit: Int] = [.kiwi: 2]
+    // when
+    sut.saveStock()
+    // then
+    let result = spyJuiceService.stock
+    XCTAssertEqual(expectResult, result)
+  }
 }
