@@ -64,7 +64,7 @@ final class SpyJuiceService: JuiceServiceable {
     //
   }
   
-  func minusStock(fruit: Fruit, count: Int) {
+  func minusStock(fruit: Fruit) {
     //
   }
   
@@ -86,19 +86,3 @@ final class SpyJuiceService: JuiceServiceable {
     //
   }
 }
-
-//func makeJuice(_ juice: Juice) -> Result<Juice, MakeJuiceError> {
-//  for ingredient in juice.recipe.ingredient {
-//    guard let count = stock[ingredient.key] else {
-//      return .failure(.NoneKeyError)
-//    }
-//    
-//    if count < ingredient.value {
-//      return .failure(.OutOfStockError)
-//    }
-//    
-//    let remainAmount = count - ingredient.value
-//    stock[ingredient.key] = remainAmount
-//  }
-//    return .success(juice)
-//}

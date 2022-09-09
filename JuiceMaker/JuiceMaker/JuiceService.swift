@@ -12,7 +12,7 @@ protocol JuiceServiceable {
   var juices: [Juice] { get }
   
   func plusStock(fruit: Fruit)
-  func minusStock(fruit: Fruit, count: Int)
+  func minusStock(fruit: Fruit)
   func addNewJuice(_ juice: Juice)
   func makeJuice(_ juice: Juice) -> Result<Juice, MakeJuiceError>
   func change(stock: [Fruit: Int])
@@ -45,7 +45,7 @@ class JuiceService: ObservableObject, JuiceServiceable {
     stock[fruit] = count + 1
   }
   
-  func minusStock(fruit: Fruit, count: Int) {
+  func minusStock(fruit: Fruit) {
     guard let count = stock[fruit] else { return }
     if count > 0 {
       stock[fruit] = count - 1
