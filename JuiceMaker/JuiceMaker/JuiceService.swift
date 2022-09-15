@@ -16,6 +16,7 @@ protocol JuiceServiceable {
   func addNewJuice(_ juice: Juice)
   func makeJuice(_ juice: Juice) -> Result<Juice, MakeJuiceError>
   func change(stock: [Fruit: Int])
+  func isEnoughStock(juice: Juice) -> Bool
 }
 
 
@@ -25,7 +26,7 @@ class JuiceService: ObservableObject, JuiceServiceable {
   @Published var juices: [Juice]
   
   init(stock: [Fruit: Int] = [.strawberry: 12,
-                            .apple: 3,
+                            .apple: 0,
                             .peach: 4,
                             .watermelcon: 5,
                             .banana: 6,
@@ -74,5 +75,15 @@ class JuiceService: ObservableObject, JuiceServiceable {
   
   func change(stock: [Fruit : Int]) {
     self.stock = stock
+  }
+  
+  func isEnoughStock(juice: Juice) -> Bool {
+    var isEnough: Bool = true
+    for (fruit, amount) in juice.recipe.ingredient {
+      if isEnough == true {
+        isEnough = stock[fruit] ?? 0 >= amount
+      }
+    }
+    return isEnough
   }
 }

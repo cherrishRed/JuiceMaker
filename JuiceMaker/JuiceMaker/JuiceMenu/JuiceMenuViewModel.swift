@@ -15,6 +15,7 @@ class JuiceMenuViewModel: ObservableObject {
   @Published var isShowSuccessAlert: Bool
   @Published var error: MakeJuiceError
   @Published var juice: Juice
+  @Published var isDisable: Bool
   
   init(service: JuiceServiceable, viewRouter: ViewRouter) {
     self.service = service
@@ -24,6 +25,8 @@ class JuiceMenuViewModel: ObservableObject {
     self.isShowSuccessAlert = false
     self.error = .NoneKeyError
     self.juice = Juice(name: "잘못된 주스", recipe: Recipe(ingredient: [.strawberry: 10]), color: Color("strawberryPink"))
+    
+    self.isDisable = false
   }
   
   private func makeJuice(_ index: Int) -> Result<Juice, MakeJuiceError> {
@@ -48,7 +51,9 @@ class JuiceMenuViewModel: ObservableObject {
     if juices.count <= index {
       return true
     } else {
-      return false
+      var isEnoughStock = service.isEnoughStock(juice: juices[index])
+      isEnoughStock.toggle()
+      return isEnoughStock
     }
   }
   

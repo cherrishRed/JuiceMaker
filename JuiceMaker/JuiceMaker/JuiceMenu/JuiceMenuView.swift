@@ -24,24 +24,18 @@ struct JuiceMenuView: View {
           .padding(.top)
         CarouselView(views: viewModel.makeCellViews(menu: viewModel.juices), currentIndex: $currentIndex)
           .frame(height: 400)
-          
         
         VStack(spacing: 20) {
           Button {
             viewModel.pushUpMakeButton(index: currentIndex)
           } label: {
-            Text("만들기")
-              .font(Font.custom("BMJUAOTF", size: 24))
+              Text(viewModel.activateMakeButton(index: currentIndex) ? "재고없음" : "만들기")
+                .font(Font.custom("BMJUAOTF", size: 24))
           }
-          .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: .red))
+          .buttonStyle(MyButtonStyle(backgroundColor: .white,
+                                     shadowColor: viewModel.activateMakeButton(index: currentIndex) ? .init("calmGray") : .init("watermelonRed")))
           .disabled(viewModel.activateMakeButton(index: currentIndex))
           .opacity(viewModel.controlMakeButtonOpacity(index: currentIndex))
-          .alert(isPresented: $viewModel.isShowErrorAlert, error: viewModel.error) {
-            Button("수정할래요", role: .none) {
-              viewRouter.currentPage = "StorageView"
-            }
-            Button("나중에 할께요", role: .none) { }
-          }
           .alert("\(viewModel.juice.name) 나왔습니다! "
                  , isPresented: $viewModel.isShowSuccessAlert) {
             Button("잘 먹겠습니다.", role: .none) {
