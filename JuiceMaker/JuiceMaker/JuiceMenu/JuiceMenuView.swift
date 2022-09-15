@@ -34,6 +34,8 @@ struct JuiceMenuView: View {
               .font(Font.custom("BMJUAOTF", size: 24))
           }
           .buttonStyle(MyButtonStyle(backgroundColor: .white, shadowColor: .red))
+          .disabled(viewModel.activateMakeButton(index: currentIndex))
+          .opacity(viewModel.controlMakeButtonOpacity(index: currentIndex))
           .alert(isPresented: $viewModel.isShowErrorAlert, error: viewModel.error) {
             Button("수정할래요", role: .none) {
               viewRouter.currentPage = "StorageView"
