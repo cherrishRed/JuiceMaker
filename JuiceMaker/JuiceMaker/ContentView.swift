@@ -16,7 +16,14 @@ struct ContentView: View {
   var body: some View {
        VStack {
           if viewRouter.currentPage == "JuiceMenuView" {
-            JuiceMenuView(viewRouter: viewRouter, viewModel: JuiceMenuViewModel(service: service, viewRouter: viewRouter))
+            let juiceMenuViewModel = JuiceMenuViewModel(service: service, viewRouter: viewRouter)
+            
+            JuiceMenuView(viewRouter: viewRouter, viewModel: juiceMenuViewModel)
+              .alert("\(viewRouter.juice.name) 나왔습니다! "
+                     , isPresented: $viewRouter.isShowSuccessAlert) {
+                Button("잘 먹겠습니다.", role: .none) {
+                }
+              }
 
           } else if viewRouter.currentPage == "StorageView" {
             
@@ -37,6 +44,8 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 class ViewRouter : ObservableObject{
+    @Published var isShowSuccessAlert: Bool = false
+    @Published var juice: Juice = Juice(name: "잘못된 주스", recipe: Recipe(ingredient: [.strawberry: 10]), color: Color("strawberryPink"))
     
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
     

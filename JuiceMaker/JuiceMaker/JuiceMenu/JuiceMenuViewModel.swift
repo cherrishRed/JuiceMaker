@@ -11,21 +11,12 @@ class JuiceMenuViewModel: ObservableObject {
   private let service: JuiceServiceable
   var viewRouter: ViewRouter
   @Published var juices: [Juice]
-  @Published var isShowErrorAlert: Bool
-  @Published var isShowSuccessAlert: Bool
-  @Published var error: MakeJuiceError
-  @Published var juice: Juice
   @Published var isDisable: Bool
   
   init(service: JuiceServiceable, viewRouter: ViewRouter) {
     self.service = service
     self.juices = service.juices
     self.viewRouter = viewRouter
-    self.isShowErrorAlert = false
-    self.isShowSuccessAlert = false
-    self.error = .NoneKeyError
-    self.juice = Juice(name: "잘못된 주스", recipe: Recipe(ingredient: [.strawberry: 10]), color: Color("strawberryPink"))
-    
     self.isDisable = false
   }
   
@@ -37,12 +28,10 @@ class JuiceMenuViewModel: ObservableObject {
     print(index)
     switch makeJuice(index) {
     case .success(let juice):
-      self.juice = juice
+      self.viewRouter.juice = juice
+      viewRouter.isShowSuccessAlert = true
       print("\(juice.name)나왔습니다.")
-      isShowSuccessAlert = true
     case.failure(let error):
-      self.error = error
-      self.isShowErrorAlert = true
       print("\(error)")
     }
   }

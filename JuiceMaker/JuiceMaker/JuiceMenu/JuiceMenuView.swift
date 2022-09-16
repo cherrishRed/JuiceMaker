@@ -36,11 +36,6 @@ struct JuiceMenuView: View {
                                      shadowColor: viewModel.activateMakeButton(index: currentIndex) ? .init("calmGray") : .init("watermelonRed")))
           .disabled(viewModel.activateMakeButton(index: currentIndex))
           .opacity(viewModel.controlMakeButtonOpacity(index: currentIndex))
-          .alert("\(viewModel.juice.name) 나왔습니다! "
-                 , isPresented: $viewModel.isShowSuccessAlert) {
-            Button("잘 먹겠습니다.", role: .none) {
-            }
-          }
           
           Button {
             viewRouter.currentPage = "StorageView"
